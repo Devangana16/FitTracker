@@ -1,0 +1,218 @@
+.fit-landing {
+    background: var(--bg-main);
+}
+
+.landing-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 24px 0;
+    backdrop-filter: blur(10px);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.landing-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: opacity 0.3s ease;
+}
+
+.landing-logo:hover {
+    opacity: 0.8 !important;
+}
+
+.logo-icon {
+    color: var(--orange);
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: var(--text-main);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.fit-hero {
+    position: relative;
+    padding: 120px 0 100px;
+    overflow: hidden;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.fit-hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 700px;
+}
+
+.hero-tag {
+    display: inline-block;
+    padding: 6px 16px;
+    background: var(--orange-dim);
+    color: var(--orange);
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 24px;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    line-height: 0.95;
+    margin-bottom: 24px;
+}
+
+.hero-title .highlight {
+    color: var(--orange);
+}
+
+.hero-title .highlight-green {
+    color: var(--green);
+}
+
+.hero-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-dim);
+    margin-bottom: 40px;
+    max-width: 550px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.btn-primary.large {
+    padding: 16px 36px;
+    font-size: 16px;
+}
+
+.hero-blob {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    filter: blur(150px);
+    opacity: 0.15;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.blob-orange {
+    background: var(--orange);
+    top: -100px;
+    right: -100px;
+}
+
+.blob-green {
+    background: var(--green);
+    bottom: -150px;
+    left: -100px;
+}
+
+.fit-features {
+    padding: 100px 0;
+    background: linear-gradient(to bottom, transparent, rgba(30, 37, 53, 0.4));
+}
+
+.grid-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.feature-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-main);
+    padding: 40px;
+    border-radius: 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--border-bright);
+}
+
+.feature-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.feature-icon.orange { background: var(--orange-dim); color: var(--orange); }
+.feature-icon.green { background: var(--green-dim); color: var(--green); }
+.feature-icon.blue { background: var(--blue-dim); color: var(--blue); }
+
+.feature-card h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: var(--text-main);
+}
+
+.feature-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-dim);
+}
+
+.fit-cta-section {
+    padding: 120px 0;
+    text-align: center;
+}
+
+.cta-content {
+    background: linear-gradient(135deg, var(--bg-card) 0%, #1e2535 100%);
+    border: 1px solid var(--border-bright);
+    padding: 80px 40px;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-icon-box {
+    margin-bottom: 32px;
+}
+
+.cta-content h2 {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.cta-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: var(--text-dim);
+}
+
+@media (max-width: 768px) {
+    .landing-header { padding: 16px 0; }
+    .logo-text { font-size: 20px; }
+    .fit-hero { padding: 80px 0; }
+    .hero-btns { flex-direction: column; width: 100%; }
+    .btn-primary, .btn-ghost { width: 100%; justify-content: center; }
+    .cta-content h2 { font-size: 2rem; }
+}
