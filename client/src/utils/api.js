@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: "https://log-analyzer-backend.onrender.com/analyze",
+    baseURL: "http://localhost:5000/analyze",
 });
 
 api.interceptors.request.use((config) => {
